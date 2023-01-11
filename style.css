@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+:root{
+    --blackColor: #000000;
+    --blackColorSecend: #151515;
+    --whiteColor: #ffffff;
+    --orengeColor: #FF5E19;
+    --cartColor: #0D0D0D;
+    --borderColor: #434343;
+    --playerTextColor: #B3B3B3;
+    --textColor: #AFAFAF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+body{
+    background-color: var(--blackColorSecend);
+}
+header{
+    background: var(--blackColor);
+}
+
+.hero-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-and-info .title{
+    color: var(--orengeColor);
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 64px;
+}
+.title-and-info .title-uderline{
+    text-align: end;
+}
+.title-and-info p{
+    color: var(--whiteColor);
+    text-align: center;
+    font-size: 20px;
+}
+.left-image,
+.rignt-image{
+    position: relative;
+    z-index: 1;
+}
+.left-image .image-1,
+.rignt-image .image-1{
+    width: 290px;
+    margin-bottom: -5px;
+}
+.left-image .image-2,
+.rignt-image .image-2{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.rignt-image{
+    transform: scaleX(-1);
+}
+
+main{
+    margin: 74px 100px 0 100px;
+    display: grid;
+    grid-template-columns: 840px 264px;
+    column-gap: 24px;
+    align-items: flex-start;
+}
+
+.player-list{
+    width: 840px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    gap: 24px;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--whiteColor);
+    width: 264px;
+    height: 371px;
+    background: var(--cartColor);
+    border: 1px solid var(--borderColor);
+}
+
+.player .player-name{
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 16px;
+}
+
+.player .player-socre{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 8px;
+
+    color: var(--playerTextColor);
+}
+
+.player .player-select-btn{
+    margin-top: 28px;
+    width: 221px;
+    height: 42px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #015196;
+    border: none;
+    outline: none;
+    color: var(--whiteColor);
+    cursor: pointer;
+}
+
+.player .deactive{
+    background: #A2A9AF !important;
+    cursor: auto;
+}
+
+.message,
+.massege1,
+.masseg2{
+    color: Red;
+}
+
+.player img{
+    width: 100%;
+    height: auto;
+}
+
+.summery{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.player-summery{
+    padding: 0 22px;
+    width: 264px;
+    height: 371px;
+    background: var(--cartColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-summery{
+    width: 264px;
+    height: 514px;
+    padding: 0 22px;
+    background: var(--cartColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--textColor);
+}
+.selected-players{
+    width: 100%;
+    padding: 0 10px;
+}
+ol li{
+    text-align: start;
+    color: var(--whiteColor);
+}
+
+.player-summery .title,
+.pricing-summery .title
+{
+    margin: 22px 0 5px 0;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--whiteColor);
+}
+.player-summery .underline{
+    width: 144px;
+    height: auto;
+    margin: 0 0 40px 0;
+}
+.pricing-summery .underline{
+    width: 144px;
+    height: auto;
+    margin: 0 0 13px 0;
+}
+
+.pricing-summery button{
+    margin-top: 19px;
+    width: 221px;
+    height: 42px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #015196;
+    border: none;
+    outline: none;
+    color: var(--whiteColor);
+    cursor: pointer;
+}
+
+.pricing-summery .player-expenses{
+    width: 100%;
+    margin: 29px 0 13px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.input-group{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 13px 0;
+}
+
+.input-group input{
+    width: 121px;
+    height: 42px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    background: none;
+    border: 1px solid var(--borderColor);
+    outline: none;
+    color: var(--textColor);
+}
+.pricing-summery .total{
+    width: 100%;
+    margin: 21px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer{
+    margin-top: 146px;
+}
+footer div{
+    margin: 41px 0 51px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--whiteColor);
+}
